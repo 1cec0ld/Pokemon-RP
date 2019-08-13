@@ -1,0 +1,10 @@
+main: net.ak1cec0ld.plugins.pokemonrp.Pokemon_RP
+name: Pokemon RP
+api-version: 1.14
+version: 1
+author: 1cec0ld
+description: No Description
+prefix: P_RP
+commands:
+  pokemonrp:
+    description: manages the plugin Pokemon_RP
