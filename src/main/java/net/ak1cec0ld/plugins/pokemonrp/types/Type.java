@@ -1,5 +1,6 @@
 package net.ak1cec0ld.plugins.pokemonrp.types;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -92,5 +93,12 @@ public enum Type {
         PSYCHIC.zeroDamage = Collections.singletonList(DARK);
         GHOST.zeroDamage = Collections.singletonList(NORMAL);
         DRAGON.zeroDamage = Collections.singletonList(FAIRY);
+    }
+    public static List<String> stringValues(){
+        List<String> values = new ArrayList<>();
+        for(Type each : values()){
+            values.add(each.name());
+        }
+        return values;
     }
 }

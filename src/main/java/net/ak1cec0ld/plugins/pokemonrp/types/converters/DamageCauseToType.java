@@ -1,4 +1,4 @@
-package net.ak1cec0ld.plugins.pokemonrp.converters;
+package net.ak1cec0ld.plugins.pokemonrp.types.converters;
 
 import net.ak1cec0ld.plugins.pokemonrp.types.Type;
 import org.bukkit.event.entity.EntityDamageEvent;

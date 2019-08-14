@@ -1,4 +1,4 @@
-package net.ak1cec0ld.plugins.pokemonrp;
+package net.ak1cec0ld.plugins.pokemonrp.files;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
