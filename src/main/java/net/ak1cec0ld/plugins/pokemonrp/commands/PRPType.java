@@ -28,6 +28,12 @@ public class PRPType implements TabExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         switch(args.length){
+            case 0:
+                if(commandSender instanceof Player){
+                    for(Type each : PlayerFile.getTypes(((Player)commandSender).getUniqueId().toString())){
+                        commandSender.sendMessage(each.toString());
+                    }
+                }
             case 2:
                 if(!(commandSender instanceof Player))return false;
                 if(!types.contains(args[1].toUpperCase())){
