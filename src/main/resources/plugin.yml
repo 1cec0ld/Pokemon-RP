@@ -18,3 +18,5 @@ commands:
   rpexp:
     aliases: [prpexp,pokemonrpexp]
     description: manage the exp of your types
+  pokemon:
+    description: Change into the type matching the PRPPokemon entered

@@ -48,7 +48,7 @@ public class PRP implements TabExecutor {
             case 2:
                 switch(args[0].toLowerCase()){
                     case "help":
-                        final List<String> subCommands = Arrays.asList("type","exp","level");
+                        final List<String> subCommands = Arrays.asList("pokemon","exp","level");
                         StringUtil.copyPartialMatches(args[1], subCommands, completions);
                         return completions;
                     default:
@@ -61,10 +61,8 @@ public class PRP implements TabExecutor {
     }
     private void messageHelp(CommandSender sender, String secondary){
         switch(secondary.toLowerCase()){
-            case "type":
-                sender.sendMessage("  /rptype set {type}       will change you to that Type of Pokémon.");
-                sender.sendMessage("  /rptype add {type}       will add that to your Types. Two maximum!");
-                sender.sendMessage("  /rptype remove {type}    will remove that Type from you. Must have 1 or more at all times!");
+            case "pokemon":
+                sender.sendMessage("  /pokemon [pokemon name]  will match your type to that Pokémon!");
                 break;
             case "exp":
                 sender.sendMessage("  /rpexp set {user} {type} {amount}   will set that person, in that type, to that exp value.");
@@ -77,8 +75,8 @@ public class PRP implements TabExecutor {
                 sender.sendMessage("  /rplevel reset {user} {type} {amount} will set that person, in that type, to 0 exp ever.");
                 break;
             default:
-                sender.sendMessage("Roleplay as a Pokemon with this plugin!");
-                sender.sendMessage("  /rp help {type|exp|level}");
+                sender.sendMessage("Roleplay as a PRPPokemon with this plugin!");
+                sender.sendMessage("  /rp help {pokemon|exp|level}");
                 sender.sendMessage("  /rp reload");
                 break;
         }

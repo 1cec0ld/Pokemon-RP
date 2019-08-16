@@ -11,7 +11,7 @@ public class CustomYMLStorage {
     private YamlConfiguration yml;
     private String filePath;
     CustomYMLStorage(JavaPlugin plugin, String filename, String path){
-        String filePath = plugin.getDataFolder().getParent()+File.separator+path+File.separator+filename;
+        filePath = plugin.getDataFolder().getParent()+File.separator+path+File.separator+filename;
         file = new File(filePath);
         if(!file.exists()){
             try{

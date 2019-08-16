@@ -40,6 +40,7 @@ public class Damage implements Listener {
             }
             //Pokemon_RP.debug(attackingDamageType + " attacked " + each+ "("+event.getEntity().getType()+") for " + event.getDamage() + " instead of " + damageBefore);
         }
+        event.setCancelled(event.getDamage() <= 0.0);
     }
 
     private Type getIncomingDamageType(EntityDamageEvent event) {
@@ -50,8 +51,6 @@ public class Damage implements Listener {
                 if(shot.getShooter() != null && shot.getShooter() instanceof Entity){
                     return EntityToType.get(((Entity)shot.getShooter()));
                 }
-            } else if(event_ee.getDamager() instanceof Player){
-                return PlayerFile.getTypes(event_ee.getDamager().getUniqueId().toString()).get(0);
             }
             return EntityToType.get(event_ee.getDamager());
         }

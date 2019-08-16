@@ -48,6 +48,9 @@ public class PlayerFile {
         storage.set(uuid+".types", Arrays.asList(type.toString()));
         yml.save();
     }
+    public static void resetType(String uuid){
+        storage.set(uuid+".types",null);
+    }
     public static void reload(){
         yml.reload();
         storage = yml.getYamlConfiguration();

@@ -53,6 +53,7 @@ public class PRPType implements TabExecutor {
                             player.sendMessage("No type found by that name!");
                             return false;
                         }
+                        player.sendMessage("Needs payment of "+PAYMENT_AMOUNT+" "+PAYMENT_METHOD.toString().toLowerCase());
                         return false;
                     case "add":
                         if(canPay(player)) {
@@ -65,6 +66,7 @@ public class PRPType implements TabExecutor {
                             player.sendMessage("Maximum of two types allowed!");
                             return false;
                         }
+                        player.sendMessage("Needs payment of "+PAYMENT_AMOUNT+" "+PAYMENT_METHOD.toString().toLowerCase());
                         return false;
                     case "remove":
                         if(PlayerFile.getTypes(player.getUniqueId().toString()).size() < 2){
