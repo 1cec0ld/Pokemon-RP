@@ -27,6 +27,7 @@ public class Damage implements Listener {
         //final double damageBefore = event.getDamage();
         Type attackingDamageType = getIncomingDamageType(event);
         List<Type> defendingDamageType = getDefendingDamageType(event);
+        if(defendingDamageType == null)return;
         for(Type each : defendingDamageType){
             if(attackingDamageType == null)return;
             if(attackingDamageType.dealsDoubleDamageTo(each)){
