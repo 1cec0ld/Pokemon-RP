@@ -22,7 +22,7 @@ public class DamageCauseToType {
         map.put(EntityDamageEvent.DamageCause.ENTITY_ATTACK,        NORMAL);
         map.put(EntityDamageEvent.DamageCause.ENTITY_EXPLOSION,     NORMAL);
         map.put(EntityDamageEvent.DamageCause.ENTITY_SWEEP_ATTACK,  FIGHTING);
-        map.put(EntityDamageEvent.DamageCause.FALL,                 FLYING);
+        map.put(EntityDamageEvent.DamageCause.FALL,                 GROUND);
         map.put(EntityDamageEvent.DamageCause.FALLING_BLOCK,        ROCK);
         map.put(EntityDamageEvent.DamageCause.FIRE,                 FIRE);
         map.put(EntityDamageEvent.DamageCause.FIRE_TICK,            FIRE);
@@ -35,7 +35,7 @@ public class DamageCauseToType {
         map.put(EntityDamageEvent.DamageCause.POISON,               POISON);
         map.put(EntityDamageEvent.DamageCause.PROJECTILE,           DARK);
         map.put(EntityDamageEvent.DamageCause.STARVATION,           BUG);
-        map.put(EntityDamageEvent.DamageCause.SUFFOCATION,          GROUND);
+        map.put(EntityDamageEvent.DamageCause.SUFFOCATION,          NORMAL);
         map.put(EntityDamageEvent.DamageCause.SUICIDE,              GHOST);
         map.put(EntityDamageEvent.DamageCause.THORNS,               STEEL);
         map.put(EntityDamageEvent.DamageCause.VOID,                 GHOST);
