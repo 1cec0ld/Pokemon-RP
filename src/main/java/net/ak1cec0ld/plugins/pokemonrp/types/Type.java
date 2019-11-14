@@ -1,5 +1,9 @@
 package net.ak1cec0ld.plugins.pokemonrp.types;
 
+import org.bukkit.event.Event;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

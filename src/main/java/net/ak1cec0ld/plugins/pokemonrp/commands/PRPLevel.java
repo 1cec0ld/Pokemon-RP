@@ -42,16 +42,17 @@ public class PRPLevel implements TabExecutor {
                 for (Player eachPlayer : Bukkit.getOnlinePlayers()){
                     finalList.add(eachPlayer.getName());
                 }
-                StringUtil.copyPartialMatches(args[2], finalList, completions);
+                StringUtil.copyPartialMatches(args[1], finalList, completions);
                 return completions;
             case 3:
                 switch(args[0].toLowerCase()) {
                     case "set":
                     case "add":
                     case "remove":
-                        StringUtil.copyPartialMatches(args[1], types, completions);
-                        return completions;
+                        StringUtil.copyPartialMatches(args[2], types, completions);
+                        break;
                 }
+                return completions;
             default:
                 return null;
         }

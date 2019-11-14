@@ -10,8 +10,8 @@ commands:
     aliases: [prp,pokemonrp]
     description: manages the plugin Pokemon_RP
   rptype:
-    aliases: [prptype,type,pokemonrptype]
-    description: manage the type of pokemon you want to be
+    aliases: [prptype,experience,pokemonrptype]
+    description: manage the experience of pokemon you want to be
   rplevel:
     aliases: [prplevel,pokemonrplevel]
     description: manage the levels of your types
@@ -19,4 +19,4 @@ commands:
     aliases: [prpexp,pokemonrpexp]
     description: manage the exp of your types
   pokemon:
-    description: Change into the type matching the PRPPokemon entered
+    description: Change into the experience matching the PRPPokemon entered

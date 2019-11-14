@@ -62,17 +62,17 @@ public class PRP implements TabExecutor {
     private void messageHelp(CommandSender sender, String secondary){
         switch(secondary.toLowerCase()){
             case "pokemon":
-                sender.sendMessage("  /pokemon [pokemon name]  will match your type to that Pokémon!");
+                sender.sendMessage("  /pokemon [pokemon name]  will match your experience to that Pokémon!");
                 break;
             case "exp":
-                sender.sendMessage("  /rpexp set {user} {type} {amount}   will set that person, in that type, to that exp value.");
-                sender.sendMessage("  /rpexp add {user} {type} {amount}   will add to that person, in that type, that amount of exp.");
-                sender.sendMessage("  /rpexp reset {user} {type} {amount} will set that person, in that type, to 0 exp ever.");
+                sender.sendMessage("  /rpexp set {user} {experience} {amount}   will set that person, in that experience, to that exp value.");
+                sender.sendMessage("  /rpexp add {user} {experience} {amount}   will add to that person, in that experience, that amount of exp.");
+                sender.sendMessage("  /rpexp reset {user} {experience} {amount} will set that person, in that experience, to 0 exp ever.");
                 break;
             case "level":
-                sender.sendMessage("  /rplevel set {user} {type} {amount}   will set that person, in that type, to that level.");
-                sender.sendMessage("  /rplevel add {user} {type} {amount}   will add to that person, in that type, that amount of levels.");
-                sender.sendMessage("  /rplevel reset {user} {type} {amount} will set that person, in that type, to 0 exp ever.");
+                sender.sendMessage("  /rplevel set {user} {experience} {amount}   will set that person, in that experience, to that level.");
+                sender.sendMessage("  /rplevel add {user} {experience} {amount}   will add to that person, in that experience, that amount of levels.");
+                sender.sendMessage("  /rplevel reset {user} {experience} {amount} will set that person, in that experience, to 0 exp ever.");
                 break;
             default:
                 sender.sendMessage("Roleplay as a PRPPokemon with this plugin!");
