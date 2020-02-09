@@ -3,7 +3,7 @@ package net.ak1cec0ld.plugins.pokemonrp;
 import net.ak1cec0ld.plugins.pokemonrp.commands.PRP;
 import net.ak1cec0ld.plugins.pokemonrp.commands.PRPPokemon;
 import net.ak1cec0ld.plugins.pokemonrp.files.PlayerFile;
-import net.ak1cec0ld.plugins.pokemonrp.listeners.global.Damage;
+import net.ak1cec0ld.plugins.pokemonrp.globalListeners.Damage;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.ComponentBuilder;

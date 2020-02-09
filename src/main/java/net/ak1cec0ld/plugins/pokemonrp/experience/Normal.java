@@ -1,4 +1,4 @@
-package net.ak1cec0ld.plugins.pokemonrp.listeners.experience;
+package net.ak1cec0ld.plugins.pokemonrp.experience;
 
 import net.ak1cec0ld.plugins.pokemonrp.Pokemon_RP;
 import net.ak1cec0ld.plugins.pokemonrp.files.PlayerFile;

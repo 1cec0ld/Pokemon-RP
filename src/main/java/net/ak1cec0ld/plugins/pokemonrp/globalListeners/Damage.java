@@ -1,4 +1,4 @@
-package net.ak1cec0ld.plugins.pokemonrp.listeners.global;
+package net.ak1cec0ld.plugins.pokemonrp.globalListeners;
 
 import net.ak1cec0ld.plugins.pokemonrp.Pokemon_RP;
 import net.ak1cec0ld.plugins.pokemonrp.attacks.ghost.ConfuseRay;
