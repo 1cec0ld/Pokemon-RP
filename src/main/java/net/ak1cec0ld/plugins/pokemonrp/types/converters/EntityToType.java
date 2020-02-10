@@ -121,7 +121,7 @@ public class EntityToType {
     }
 
     public static Type get(Entity cause){
-        if(!map.keySet().contains(cause.getType()))return null;
+        if(!map.keySet().contains(cause.getType()))return NORMAL;
         if(cause.getType().equals(EntityType.PLAYER))
         try {
             return PlayerFile.getTypes(cause.getUniqueId().toString()).get(0);

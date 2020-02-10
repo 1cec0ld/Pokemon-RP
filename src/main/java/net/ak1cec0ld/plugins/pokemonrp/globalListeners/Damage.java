@@ -29,10 +29,10 @@ public class Damage implements Listener {
     @EventHandler
     public void onDamage(EntityDamageEvent event){
         Type attackingDamageType = getIncomingDamageType(event);
+        if(attackingDamageType == null)return;
         List<Type> defendingDamageType = getDefendingDamageType(event);
         if(defendingDamageType == null)return;
         for(Type each : defendingDamageType){
-            if(attackingDamageType == null)return;
             if(attackingDamageType.dealsDoubleDamageTo(each)){
                 event.setDamage(event.getDamage()*2);
             }

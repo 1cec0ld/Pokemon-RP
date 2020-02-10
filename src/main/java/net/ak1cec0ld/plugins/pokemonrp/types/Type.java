@@ -29,9 +29,9 @@ public enum Type {
     STEEL,
     FAIRY;
 
-    private List<Type> doubleDamage;
-    private List<Type> halfDamage;
-    private List<Type> zeroDamage;
+    private static List<Type> doubleDamage;
+    private static List<Type> halfDamage;
+    private static List<Type> zeroDamage;
 
     static {
         populateDoubleDamage();
@@ -40,7 +40,7 @@ public enum Type {
     }
 
     public boolean dealsDoubleDamageTo(Type versus){
-        return this.doubleDamage != null && this.doubleDamage.contains(versus);
+        return doubleDamage != null && doubleDamage.contains(versus);
     }
     public boolean dealsHalfDamageTo(Type versus){
         return this.halfDamage != null && this.halfDamage.contains(versus);
