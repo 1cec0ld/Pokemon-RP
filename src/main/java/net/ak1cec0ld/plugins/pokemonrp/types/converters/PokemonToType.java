@@ -983,7 +983,7 @@ public class PokemonToType {
         }
         return null;
     }
-    public static List<String> getPokemonNames(){
+    public static List<String> allPokemonNames(){
         return new ArrayList<>(map.keySet());
     }
 }
