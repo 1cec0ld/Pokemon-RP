@@ -1,6 +1,7 @@
 package net.ak1cec0ld.plugins.pokemonrp.files;
 
 import net.ak1cec0ld.plugins.pokemonrp.Pokemon_RP;
+import net.ak1cec0ld.plugins.pokemonrp.experience.ExperienceTranslator;
 import net.ak1cec0ld.plugins.pokemonrp.types.Type;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -66,13 +67,11 @@ public class PlayerFile {
     }
     public static int getLevel(String uuid, Type type){
         int exp = storage.getInt(uuid+ "." +type.toString()+ ".exp",0);
-        return Math.min(levelFunction(exp),100);
+        return ExperienceTranslator.level(exp);
     }
     public static int getExp(String uuid, Type type){
         return storage.getInt(uuid+ "." +type.toString()+ ".exp",0);
     }
 
-    private static int levelFunction(int y){
-        return (int) (((double)1/6)* (Math.pow((10 *Math.sqrt(81 *Math.pow(y,2) - 16695 *y + 1387600) + 90 *y - 9275),((double)1/3)) - (75 *Math.pow(5,((double)2/3)))/Math.pow((2 *Math.sqrt(81 *Math.pow(y,2) - 16695 *y + 1387600) + 18 *y - 1855),((double)1/3)) + 25));
-    }
+
 }
