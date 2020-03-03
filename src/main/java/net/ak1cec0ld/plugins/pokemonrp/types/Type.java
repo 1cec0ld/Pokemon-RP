@@ -1,9 +1,5 @@
 package net.ak1cec0ld.plugins.pokemonrp.types;
 
-import org.bukkit.event.Event;
-import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -29,9 +25,9 @@ public enum Type {
     STEEL,
     FAIRY;
 
-    private static List<Type> doubleDamage;
-    private static List<Type> halfDamage;
-    private static List<Type> zeroDamage;
+    private List<Type> doubleDamage;
+    private List<Type> halfDamage;
+    private List<Type> zeroDamage;
 
     static {
         populateDoubleDamage();
@@ -40,7 +36,7 @@ public enum Type {
     }
 
     public boolean dealsDoubleDamageTo(Type versus){
-        return doubleDamage != null && doubleDamage.contains(versus);
+        return this.doubleDamage != null && this.doubleDamage.contains(versus);
     }
     public boolean dealsHalfDamageTo(Type versus){
         return this.halfDamage != null && this.halfDamage.contains(versus);
