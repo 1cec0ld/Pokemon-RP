@@ -2,8 +2,9 @@ package net.ak1cec0ld.plugins.pokemonrp;
 
 import net.ak1cec0ld.plugins.pokemonrp.commands.PRP;
 import net.ak1cec0ld.plugins.pokemonrp.commands.PRPPokemon;
+import net.ak1cec0ld.plugins.pokemonrp.experience.ExperienceManager;
 import net.ak1cec0ld.plugins.pokemonrp.files.PlayerFile;
-import net.ak1cec0ld.plugins.pokemonrp.listeners.Damage;
+import net.ak1cec0ld.plugins.pokemonrp.globalListeners.Damage;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.ComponentBuilder;
@@ -14,6 +15,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Pokemon_RP extends JavaPlugin{
     private static Pokemon_RP instance;
 
+    public static String DAMAGE_KEY = "damageTypeMarker";
+
     public void onEnable(){
         instance = this;
 
@@ -23,6 +26,7 @@ public class Pokemon_RP extends JavaPlugin{
         //new PRPType();
         new PRPPokemon();
         new Damage();
+        new ExperienceManager();
 
     }
 

@@ -50,7 +50,7 @@ public class PRPType implements TabExecutor {
                                 player.getInventory().removeItem(new ItemStack(PAYMENT_METHOD,PAYMENT_AMOUNT));
                                 return true;
                             }
-                            player.sendMessage("No type found by that name!");
+                            player.sendMessage("No experience found by that name!");
                             return false;
                         }
                         player.sendMessage("Needs payment of "+PAYMENT_AMOUNT+" "+PAYMENT_METHOD.toString().toLowerCase());
@@ -77,7 +77,7 @@ public class PRPType implements TabExecutor {
                             player.sendMessage("Removed " + args[1].toUpperCase());
                             return true;
                         }
-                        player.sendMessage("Failed, no type found by that name.");
+                        player.sendMessage("Failed, no experience found by that name.");
                         return false;
                     default:
                         commandSender.sendMessage("No valid action received.");
@@ -101,7 +101,7 @@ public class PRPType implements TabExecutor {
                                 commandSender.sendMessage("Type set to " + args[1].toUpperCase());
                                 return true;
                             }
-                            commandSender.sendMessage("No type found by that name!");
+                            commandSender.sendMessage("No experience found by that name!");
                             return false;
                         case "add":
                             if (PlayerFile.getTypes(target.getUniqueId().toString()).size() < 2) {
@@ -120,7 +120,7 @@ public class PRPType implements TabExecutor {
                                 commandSender.sendMessage("Removed " + args[1].toUpperCase());
                                 return true;
                             }
-                            commandSender.sendMessage("Failed, no type found by that name.");
+                            commandSender.sendMessage("Failed, no experience found by that name.");
                             return false;
                         default:
                             commandSender.sendMessage("No valid action received.");
@@ -130,7 +130,7 @@ public class PRPType implements TabExecutor {
                 commandSender.sendMessage("Operator Only!");
                 return false;
             default:
-                commandSender.sendMessage("Use /rp help type");
+                commandSender.sendMessage("Use /rp help experience");
                 return false;
         }
     }

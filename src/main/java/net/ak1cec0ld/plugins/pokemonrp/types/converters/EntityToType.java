@@ -1,5 +1,6 @@
 package net.ak1cec0ld.plugins.pokemonrp.types.converters;
 
+import net.ak1cec0ld.plugins.pokemonrp.Pokemon_RP;
 import net.ak1cec0ld.plugins.pokemonrp.files.PlayerFile;
 import net.ak1cec0ld.plugins.pokemonrp.types.Type;
 import org.bukkit.entity.Entity;
@@ -120,8 +121,19 @@ public class EntityToType {
     }
 
     public static Type get(Entity cause){
-        if(!map.keySet().contains(cause.getType()))return null;
-        if(cause.getType().equals(EntityType.PLAYER))return PlayerFile.getTypes(cause.getUniqueId().toString()).get(0);
-        return map.get(cause.getType());
+        if(!map.keySet().contains(cause.getType()))return NORMAL;
+        if(cause.getType().equals(EntityType.PLAYER))
+        try {
+            return PlayerFile.getTypes(cause.getUniqueId().toString()).get(0);
+        } catch (Exception e){
+            Pokemon_RP.debug("Unknown Player caused damage, no valid mapping to Type");
+            return NORMAL;
+        }
+        try {
+            return map.get(cause.getType());
+        } catch (Exception e){
+            Pokemon_RP.debug("Unknown Entity caused damage, no valid mapping to Type: "+ cause.getType().toString());
+            return NORMAL;
+        }
     }
 }

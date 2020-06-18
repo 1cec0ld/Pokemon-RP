@@ -49,7 +49,7 @@ public class PRPPokemon implements TabExecutor {
         final List<String> completions = new ArrayList<>();
         switch(args.length){
             case 1:
-                StringUtil.copyPartialMatches(args[0], PokemonToType.getPokemonNames(), completions);
+                StringUtil.copyPartialMatches(args[0], PokemonToType.allPokemonNames(), completions);
                 return completions;
             case 2:
                 List<String> finalList = new ArrayList<>();

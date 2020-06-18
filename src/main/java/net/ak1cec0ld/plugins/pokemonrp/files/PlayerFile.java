@@ -1,6 +1,7 @@
 package net.ak1cec0ld.plugins.pokemonrp.files;
 
 import net.ak1cec0ld.plugins.pokemonrp.Pokemon_RP;
+import net.ak1cec0ld.plugins.pokemonrp.experience.ExperienceTranslator;
 import net.ak1cec0ld.plugins.pokemonrp.types.Type;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -55,17 +56,8 @@ public class PlayerFile {
         yml.reload();
         storage = yml.getYamlConfiguration();
     }
-    public static void setLevel(String uuid, Type type, int level){
-        storage.set(uuid+ "." +type.toString()+ ".level",level);
-        yml.save();
-    }
     public static void setExp(String uuid, Type type, int exp){
         storage.set(uuid+ "." +type.toString()+ ".exp",exp);
-        yml.save();
-    }
-    public static void addLevel(String uuid, Type type, int level){
-        int oldLevel = storage.getInt(uuid+ "." +type.toString()+ ".level",0);
-        storage.set(uuid+ "." +type.toString()+ ".level", oldLevel+level);
         yml.save();
     }
     public static void addExp(String uuid, Type type, int exp){
@@ -74,9 +66,12 @@ public class PlayerFile {
         yml.save();
     }
     public static int getLevel(String uuid, Type type){
-        return storage.getInt(uuid+ "." +type.toString()+ ".level",0);
+        int exp = storage.getInt(uuid+ "." +type.toString()+ ".exp",0);
+        return ExperienceTranslator.level(exp);
     }
     public static int getExp(String uuid, Type type){
         return storage.getInt(uuid+ "." +type.toString()+ ".exp",0);
     }
+
+
 }
